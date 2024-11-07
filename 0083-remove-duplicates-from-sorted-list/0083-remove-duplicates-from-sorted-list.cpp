@@ -21,8 +21,7 @@ public:
                 ListNode* NextNode = temp->next;
                 temp->next = NextNode->next;
                 NextNode->next = nullptr;
-                delete NextNode;
-                
+                delete NextNode; 
             }
             else{
                 temp = temp->next;
