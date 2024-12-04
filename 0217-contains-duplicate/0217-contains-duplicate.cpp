@@ -2,16 +2,12 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
         int n=nums.size();
-        map<int,int> mp;
+        set<int> s;
         for(int i=0; i<n; i++){
-            int num = nums[i];
-            mp[num]++;
+            s.insert(nums[i]);
         }
-        for(auto i:mp){
-            if(i.second >= 2){
-                return true;
-            }
-        }
-        return false;
+        if(s.size()<n) return true;
+        else return false;
     }
 };
+
