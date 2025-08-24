@@ -1,0 +1,32 @@
+class Solution {
+  public:
+    bool canWePlace(vector<int> &stalls, int dist, int k){
+        int cnt = 1, last = stalls[0];
+        for(int i=1; i<stalls.size();i++){
+            if(stalls[i]-last >=dist){
+                cnt++;
+                last = stalls[i];
+            }
+        }
+        if(cnt >= k) return true;
+        else return false;
+    }
+    int aggressiveCows(vector<int> &stalls, int k) {
+        // code here
+        sort(stalls.begin(),stalls.end());
+        int n = stalls.size();
+        int max = stalls[n-1], min = stalls[0], ans = 1;
+        int lo = 1,hi = max-min;
+        while(lo<=hi){
+            int mid = lo+(hi-lo)/2;
+            if(canWePlace(stalls,mid,k)){
+                ans = mid;
+                lo = mid+1;
+            }
+            else{
+                hi = mid-1;
+            }
+        }
+        return ans;
+    }
+};
