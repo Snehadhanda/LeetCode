@@ -1,12 +1,23 @@
 class Solution {
 public:
     int thirdMax(vector<int>& nums) {
-        set<int>st(nums.begin(),nums.end());
-        vector<int>v(st.begin(),st.end());
-        sort(v.begin(), v.end(),[](int a, int b){
-            return a>b;
+        int ans =INT_MIN;
+        int cnt = 0;
+        int i=0;
+        sort(nums.begin(), nums.end(),[](int a, int b){
+            return a > b;
         });
-        if(v.size() < 3) return v[0];
-        else return v[2];
+        while(i<nums.size() && cnt<3){
+            if(ans == nums[i]){
+                i++;
+                continue;
+            }
+            else {cnt++;
+            ans = nums[i];
+            }
+            i++;
+        }
+        if(cnt==3) return ans;
+        return nums[0];
     }
 };
