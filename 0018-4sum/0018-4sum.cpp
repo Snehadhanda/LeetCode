@@ -2,26 +2,30 @@ class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
         int n = nums.size();
-        set<vector<int>>st;
-        
-        for(int i=0; i<n;i++){
+        sort(nums.begin(),nums.end());
+        vector<vector<int>>ans;
+        for(int i=0; i<n; i++){
+            if(i>0 && nums[i]==nums[i-1]) continue;
             for(int j = i+1; j<n; j++){
-                set<long long> s;
-                for(int k = j+1; k<n; k++){
+                if(j>i+1 && nums[j]==nums[j-1]) continue;
+
+                int l = j+1, r = n-1;
+                while(l<r){
                     long long sum = nums[i]+nums[j];
-                    sum+=nums[k];
-                    long long fourth = target - sum;
-                    if(s.find(fourth) != s.end()){
-                        vector<int> temp = {nums[i], nums[j], nums[k], (int) fourth};
-                        sort(temp.begin(),temp.end());
-                        st.insert(temp);
+                    sum+= nums[l];
+                    sum+=nums[r];
+                    
+                    if(sum == target){
+                        ans.push_back({nums[i],nums[j],nums[l],nums[r]});
+                        l++;r--;
+                        while(l<r && nums[l]==nums[l+1]) l++;
+                        while(l<r && nums[r] == nums[r--]) r--;
                     }
-                    s.insert(nums[k]);
+                    if(sum < target) l++;
+                    else r--;
                 }
-                
             }
         }
-        vector<vector<int>> ans(st.begin(),st.end());
         return ans;
     }
 };
