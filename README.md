@@ -28,4 +28,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1672-richest-customer-wealth](https://github.com/Snehadhanda/LeetCode/tree/master/1672-richest-customer-wealth) |
+## Database
+|  |
+| ------- |
+| [1068-product-sales-analysis-i](https://github.com/Snehadhanda/LeetCode/tree/master/1068-product-sales-analysis-i) |
 <!---LeetCode Topics End-->
