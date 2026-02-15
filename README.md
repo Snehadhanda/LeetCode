@@ -10,6 +10,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Math
 |  |
 | ------- |
+| [0067-add-binary](https://github.com/Snehadhanda/LeetCode/tree/master/0067-add-binary) |
 | [1295-find-numbers-with-even-number-of-digits](https://github.com/Snehadhanda/LeetCode/tree/master/1295-find-numbers-with-even-number-of-digits) |
 | [1426-find-n-unique-integers-sum-up-to-zero](https://github.com/Snehadhanda/LeetCode/tree/master/1426-find-n-unique-integers-sum-up-to-zero) |
 ## Hash Table
@@ -34,4 +35,16 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0197-rising-temperature](https://github.com/Snehadhanda/LeetCode/tree/master/0197-rising-temperature) |
 | [1068-product-sales-analysis-i](https://github.com/Snehadhanda/LeetCode/tree/master/1068-product-sales-analysis-i) |
 | [1581-customer-who-visited-but-did-not-make-any-transactions](https://github.com/Snehadhanda/LeetCode/tree/master/1581-customer-who-visited-but-did-not-make-any-transactions) |
+## String
+|  |
+| ------- |
+| [0067-add-binary](https://github.com/Snehadhanda/LeetCode/tree/master/0067-add-binary) |
+## Bit Manipulation
+|  |
+| ------- |
+| [0067-add-binary](https://github.com/Snehadhanda/LeetCode/tree/master/0067-add-binary) |
+## Simulation
+|  |
+| ------- |
+| [0067-add-binary](https://github.com/Snehadhanda/LeetCode/tree/master/0067-add-binary) |
 <!---LeetCode Topics End-->
